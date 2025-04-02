@@ -31,14 +31,14 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <CustomButton />
+      <div><CustomButton /></div>
       <div>
         <img
           src={ImageURL}
           alt="Hedy Lamarr"
-          class="photo"
+          className="photo"
         ></img>
-        {ErrorMessage}
+        <div>{ErrorMessage}</div>
       </div>
     </>
   );
