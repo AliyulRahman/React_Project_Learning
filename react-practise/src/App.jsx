@@ -1,10 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import CustomButton from "./button";
+import {ErrorMessage,ImageURL} from "./Constants"
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -28,8 +31,17 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <CustomButton />
+      <div>
+        <img
+          src={ImageURL}
+          alt="Hedy Lamarr"
+          class="photo"
+        ></img>
+        {ErrorMessage}
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
