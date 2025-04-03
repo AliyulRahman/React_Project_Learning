@@ -1,7 +1,7 @@
 import Avatar from './avatar'
 import Card from './card'
 
-export default function App() {
+function App() {
   return (
     <div>
       <Card>
@@ -34,3 +34,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App
