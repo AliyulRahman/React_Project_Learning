@@ -1,47 +1,36 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import CustomButton from "./button";
-import {ErrorMessage,ImageURL} from "./Constants"
+import Avatar from './avatar'
+import Card from './card'
 
-
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <div><CustomButton /></div>
-      <div>
-        <img
-          src={ImageURL}
-          alt="Hedy Lamarr"
-          className="photo"
-        ></img>
-        <div>{ErrorMessage}</div>
-      </div>
-    </>
+    <div>
+      <Card>
+      <Avatar
+        size={100}
+        person={{ 
+          name: 'Katsuko Saruhashi',
+          imageId: 'YfeOqp2'
+        }}
+      />
+    </Card>
+    <Card>
+    <Avatar
+        size={100}
+        person={{
+          name: 'Aklilu Lemma', 
+          imageId: 'OKS67lh'
+        }}
+      />
+    </Card>
+    <Card>
+    <Avatar
+        size={100}
+        person={{ 
+          name: 'Lin Lanying',
+          imageId: '1bX5QH6'
+        }}
+      />
+    </Card>
+    </div>
   );
 }
-
-export default App;
